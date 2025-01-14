@@ -10,7 +10,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -119,7 +118,7 @@ public abstract class AbstractRSJukebox extends JukeboxBlock implements ITabbedI
 
     @Override
     public int getWeakRedstonePower(BlockState pState, BlockView pLevel, BlockPos pPos, Direction direction) {
-        if (pLevel instanceof ClientWorld) return 0;
+        if (pLevel instanceof World w && w.isClient) return 0;
         var jukeboxBE = getJukeboxBE(pLevel, pPos);
         if (jukeboxBE == null) return 0;
         var blockDirection = pState.get(HORIZONTAL_FACING);
