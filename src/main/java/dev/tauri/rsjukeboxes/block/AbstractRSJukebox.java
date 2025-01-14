@@ -40,7 +40,7 @@ import static net.minecraft.state.property.Properties.HORIZONTAL_FACING;
 @SuppressWarnings("deprecation")
 public abstract class AbstractRSJukebox extends JukeboxBlock implements ITabbedItem {
     public AbstractRSJukebox() {
-        super(AbstractBlock.Settings.copy(Blocks.JUKEBOX));
+        super(AbstractBlock.Settings.copy(Blocks.JUKEBOX).nonOpaque());
         setDefaultState(getDefaultState().with(HORIZONTAL_FACING, Direction.NORTH));
     }
 

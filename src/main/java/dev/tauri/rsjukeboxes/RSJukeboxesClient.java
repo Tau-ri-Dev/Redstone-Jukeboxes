@@ -23,6 +23,7 @@ public class RSJukeboxesClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(BlockEntityRegistry.TIER2_ADVANCED_JUKEBOX, TieredJukeboxRenderer::new);
         BlockEntityRendererFactories.register(BlockEntityRegistry.TIER3_ADVANCED_JUKEBOX, TieredJukeboxRenderer::new);
 
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.REPEATING_JUKEBOX_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.TIER1_ADVANCED_JUKEBOX_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.TIER2_ADVANCED_JUKEBOX_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.TIER3_ADVANCED_JUKEBOX_BLOCK, RenderLayer.getCutout());
