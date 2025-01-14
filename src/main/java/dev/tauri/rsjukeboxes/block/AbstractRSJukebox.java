@@ -40,7 +40,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 @SuppressWarnings("deprecation")
 public abstract class AbstractRSJukebox extends JukeboxBlock implements ITabbedItem {
     public AbstractRSJukebox(Properties properties) {
-        super(properties.isRedstoneConductor((pState, pLevel, pPos) -> false));
+        super(properties.isRedstoneConductor((pState, pLevel, pPos) -> false).noOcclusion());
         this.registerDefaultState(defaultBlockState().setValue(HORIZONTAL_FACING, Direction.NORTH));
     }
 
