@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "rsjukeboxes:rs_jukebox_block",
+    "rsjukeboxes:repeating_jukebox_block",
+    "rsjukeboxes:tier1_advanced_jukebox_block",
+    "rsjukeboxes:tier2_advanced_jukebox_block",
+    "rsjukeboxes:tier3_advanced_jukebox_block"
+  ]
+}
